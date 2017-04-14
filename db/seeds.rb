@@ -13,8 +13,8 @@ reports_data = []
 
 single_reports.each do |report|
   data_elements = report.css('td')
-  single_report_data = {}
-  single_report_data[:date_time] = data_elements[0].text
+  Report.new
+  single_report_data[:sighted] = data_elements[0].text
   single_report_data[:city] = data_elements[1].text
   single_report_data[:state] = data_elements[2].text
   single_report_data[:shape] = data_elements[3].text
